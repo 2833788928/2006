@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="account" id="tell"><br>
+    <input type="text" name="pwd" id="pwd"><br>
+    <input type="submit" value="提交">
+</body>
+<script>
+           //实例化XML
+        var xhr=new XMLHttpRequest();
+        //监听readyState值
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4 && xhr.status==200){
+                            //接受服务器的相应
+                    var json_str=xhr.responseText();
+                    var data=JSON.parse(json_str);
+                    console.log(data);
+            }
+        }
+        xhr.open('login.php','post');
+        xhr.send();
+            // 什么是ajax AJAX是异步的JavaScript和XML  同步synchronous 异步Asyncchronous
+        // js对象转化为JSON字符串 JSON.stringify()
+        // JSON字符串转为js对象 JSON.parse()
+        // php json函数 json_encode 编码json
+        // json_decode  解码json
+            //setInterval(function(){},1000)每间隔一秒执行一次
+            //setTimeout(function(){},1000)x毫秒后执行一次 且只能执行一次
+            // clearTimeout clearInterval 两种清理计时器
+</script>
+</html>

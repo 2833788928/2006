@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>对象</h1>
+    <span id="btn"></span>
+    <!-- <button class="stop">停止</button>
+    <button class="start">开始</button> -->
+</body>
+<script>
+          
+                  var stop= setInterval(function(){
+                    var t=new Date();
+                   var year= t.getFullYear();
+            console.log(year);
+           var month=t.getMonth()+1;
+           console.log(month);
+                var day=t.getDate()
+                console.log(Date);
+                var hours=t.getHours();
+                console.log(hours)
+               var mintues=t.getMinutes();
+               console.log(mintues);
+                    var getseconds=t.getSeconds();
+                    console.log(getseconds)
+                   var ymdhis= year + '-' +month+'-'+day +"" +hours+':'+mintues+':'+getseconds
+                   console.log(ymdhis);
+                   document.getElementById("btn").innerText=ymdhis
+              
+
+                   },1000)
+
+           
+</script>
+</html>

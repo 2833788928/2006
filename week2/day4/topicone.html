@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // JavaScript 六种数据类型 字符串 string 布尔型 boolean 未定义 undefined 空null number 数值 、
+    // 复杂数据类型 object 对象 
+    // 检测数据类型 typeof typeof 的返回值 string Boolean undefined number object function    Dom document Object Model
+    // 获取节点 根据Id获取节点 document.getElementById('id名')  根据类获取节点document.getElementsByClass('类名')
+    // 通过标签名 document.getElementsByTagName('标签名') document.querySelector('.类名')返回第一个类名节点
+    // document.queryselectorAll('.类名') 返回所有类名节点  
+    // 移出id 为abc的节点 document.getElementById('abc').remove();
+    // JSON_parse将json字符串转化为数组 JSON_stringify 将数组转化为字符串 json_dncode解码 json_encode编码
+    // XHR常用的属性方法 onreadystatechange当状态值发生改变时的处理数据 readyState请求的状态值 status HTTP状态码 
+    // responseText服务器响应的数据 open 初始化一个请求 send 发送请求 
+                // Ajax异步请求 
+                            var xhr = new XMLHttpRequest();//实例化XML
+                                xhr.onreadyStatechange=function(){      //检测readyState状态变化
+                                    if(xhr.readyState==4 && xhr.status==200){
+                                        // 接受服务器的响应
+                                        var json_str=xhr.responseText;
+                                        // 将json字符串转化为对象
+                                           var data= JSON.parse(json_str)
+                                    }
+                                }
+                               xhr.open("POST","abc.php")
+                                xhr.send()
+                                //数组  定义一个数组 var arr=[11,12,13,14,15,16];
+                                // var length=arr.length 获取数组的长度
+        // 1.6 
+            //编程单词 同步 synchronous 异步sysnchronous method 方法 default prevent
+            // 1.5 function 函数 query查询 对象 object error 错误 browser浏览器 network网络 request请求
+            // response  status  data database info version excption 异常
+            // js对象转json字符串JSON.stringify
+</script>
+</html>

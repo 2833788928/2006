@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="account" id="tell">编号
+
+</body>
+<script>
+    //          根据id找到节点 绑定一个失去焦点 
+            document.querySelector('#tell').addEventListener('blur',function(){
+                var value=this.value;
+                // console.log(value);
+                // 发送Ajax请求 查询当前编号是否可用
+                var xhr=new XMLHttpRequest;
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4 && xhr.status==200){
+                        var json_str=xhr.responseText;
+                        // console.log(json_str);
+                        var data=JSON.parse(json_str);
+
+                    }
+
+                }
+
+            })
+                xhr.open("GET","Three.php?account="+account);
+                xhr.send();
+
+            
+
+
+
+
+</script>
+</html>

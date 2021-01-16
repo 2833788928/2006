@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+          <style>
+              #btn1{
+                  width:80px;
+                  height:80px;
+                  background: green;
+              }
+              #btn1{
+                  width:80px;
+                  height:80px;
+                  background: green;
+              }
+              #btn1{
+                  width:80px;
+                  height:80px;
+                  background: green;
+              }
+              #btn2{
+                  width:80px;
+                  height:80px;
+                  background: green;
+              }
+              #btn3{
+                  width:80px;
+                  height:80px;
+                  background: green;
+              }
+          </style>
+</head>
+<body>
+
+           <div id="btn1">
+               <button class="bun">预定</button>
+           </div>
+           <div id="btn2">
+            <button class="bun2">预定</button>
+        </div>
+        <div id="btn3">
+            <button class="bun3">预定</button>
+        </div>
+</body>
+<script src="../../jquery-3.4.1.min.js"></script>
+<script>
+        $(document).ready(function(){
+                $(".bun").click(function(){
+                    $("#btn1").css('background','red');
+                    $("#btn1").text('已预定');
+                })
+                $(".bun2").click(function(){
+                    $("#btn2").css('background','red');
+                    $("#btn2").text('已预定');
+                })
+                $(".bun3").click(function(){
+                    $("#btn3").css('background','red');
+                    $("#btn3").text('已预定');
+                })
+        })
+</script>
+</html>

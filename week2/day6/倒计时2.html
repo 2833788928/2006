@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date 对象</h1>
+    倒计时：<span id="btn"></span>
+</body>
+<script src="../../jquery-3.4.1.min.js"></script>
+<script>
+    var num=60000
+     setInterval(function(){
+       num--
+       console.log(num)
+       document.getElementById('btn').innerText=num
+     },1000)
+
+    //将秒变成小时
+               var h= num/3600;
+               var h=Math.floor(h);
+               console.log("h: "+h)
+
+               var m=num/60;
+               var m=Math.floor(m);
+               console.log("m: "+m);
+</script>
+</html>

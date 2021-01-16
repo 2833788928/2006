@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+            
+            setInterval(function(){
+                       var t= new Date();
+                       var year=t.getFullYear();
+                       console.log(year);
+                       var month=t.getMonth()+1;
+                       console.log(month);
+                       var day=t.getDate();
+                       console.log(day);
+                       var hours=t.getHours();
+                       console.log(hours);
+                       var getMinutes=t.getMinutes();
+                       console.log(getMinutes);
+                       var getSeconds=t.getSeconds();
+                       console.log(getSeconds);
+                       var ymdhis= year + '-' +month+'-'+day +"" +hours+':'+getMinutes+':'+getSeconds
+                   console.log(ymdhis);
+                   document.getElementById("btn").innerText=ymdhis
+
+            },1000)
+</script>
+</html>

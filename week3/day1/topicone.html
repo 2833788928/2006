@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+</head>
+<body>
+        账号：<input type="text" name="account" id="btn"><br>
+        密码：<input type="password" name="pwd" id="bun"><br>
+        <input type="submit" value="登录">
+</body>
+<script>
+           var btn=document.getElementById('btn');
+           btn.onblur=function(){
+         var value=document.getElementById('btn').value;
+         if(value==""){
+            alert('账号不能为空')
+         }
+              
+           }
+           var bun=document.getElementById('bun');
+           bun.onblur=function(){
+         var pwd=document.getElementById('bun').value;
+         if(pwd==""){
+            alert('密码不能为空')
+         }
+              
+           }
+           //实例化xml
+            var xhr=new XMLHttpRequest();
+            onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var json_str=xhr.responseText();
+                        var date=JSON.parse(json_str);
+                }
+            }
+            xhr.open('get','abc.php');
+            xhr.send();
+
+</script>
+</html>

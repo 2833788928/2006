@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+    <style>
+        .divs{
+            width: 100px;
+            height:100px;
+            border: 1px solid #eeeeee;
+            background-color: #eeeeee;
+            margin: 10px;
+            float:left;
+        }
+        #app{
+            width: 400px;
+            height: 400px;
+            float: left;
+        }
+        .border{
+            border:1px solid red;
+            background-color: red ;
+        }
+    </style>
+</head>
+<body>
+    <h1>定时器</h1>
+    <div id="app">
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+        <div class="divs"></div>
+    </div>
+    <button id="btn">开始</button>
+    <button id="bun">停止</button>
+</body>
+<script src="../../jquery-3.4.1.min.js"></script>
+<script>
+        //    document.getElementById('btn').addEventListener("click",function(){
+        //     // setTimeout(function(){
+        //     //         // console.log(111)
+        //     //         alert('非法操作,请退出');
+        //     // },3000);
+        //     setInterval(function(){
+        //       var num= Math.random();
+        //       console.log(num);
+        //      var num10= num*100
+        //      console.log(parseInt(num10));
+        //     },1000)
+        //    })
+        $("#btn").click(function(){
+            var divs=$(".divs")
+             var bttn=setInterval(function(){
+                 divs.removeClass('border')
+                var rand_num= Math.random()*1000;
+                  var num=  parseInt(rand_num);
+                console.log(num % 9);
+                var index=num % 9
+                divs.eq(index).addClass("border")
+             },1000)
+      
+        $("#bun").click(function(){
+            //清除定时器
+                clearInterval(bttn);
+        })
+    })
+</script>
+
+    
+
+</html>

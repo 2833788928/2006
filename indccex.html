@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <button id="btn">R1R4</button>
+            <form action="{:url('abc.php')}" method="post">
+            用户名<input type="text" name="username"><br>
+            手机号<input type="text" name="tel"><br>
+            邮箱<input type="email" name="email"><br>
+            密码<input type="password" name="password"><br>
+            确认密码<input type="password" mame="pwd"><br>
+            <input type="submit" value="注册">
+            </form>
+</body>
+<script>
+                document.getElementById('btn');
+                var p=document.forms[0];
+                p.addEventListener('submit',function(){
+                    alert ();
+                })
+                //通过Ajax技术将数据传给控制器
+                    var xhr= new XMLHttpRequest;
+                    xhr.onreadyStatechange=function(){
+                        if(xhr.readyState==4 && xhr.status==200){
+                            var json_str=xhr.responseText
+                            console.log(json_str)
+                           var data=JSON_pase(json_str);
+                        }
+                    }
+                    xhr.open("POST","aaa.php");
+                    xhr.send();
+                    //0106编程单词 method  default prevent asynchronous synchronous action √
+                    //阻止默认行文 e.preventDefault();
+                    // XHR常用到的属性 onreadyStatechange 当状态值发生变化时处理函数
+                    // readyState 请求的状态值      status HTTP状态码  responseText 服务器相应的数据 
+                    // send 发送一个请求 open 初始化一个请求
+        //    json_decode json解码  json_encode json编码  JSON.parse 将json字符串转化为数组 JSON.stringify将JSON数组转化为对象
+ 
+</script>
+</html>
